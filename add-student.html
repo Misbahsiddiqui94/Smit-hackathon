@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Add Student</h2>
+    <form id="addStudentForm">
+        <input type="text" id="firstName" placeholder="First Name" required><br>
+        <input type="text" id="lastName" placeholder="Last Name" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <input type="text" id="cnic" placeholder="CNIC" required><br>
+        <select id="userType">
+            <option value="Student">Student</option>
+        </select><br>
+        <button type="button" onclick="addStudent()">Add Student</button>
+    </form>
+    <script>
+        function addStudent() {
+            // Add student functionality
+            alert('Student Added!');
+        }
+    </script>
+</body>
+</html>

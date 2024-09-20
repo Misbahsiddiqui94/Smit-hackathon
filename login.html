@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" type="module"></script>
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+    <script>
+        function login() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            
+            // Add your login validation logic here
+            if (email === "admin@example.com" && password === "admin123") {
+                alert('Login Successful!');
+                window.location.href = 'admin.html';  // Redirect to admin portal for admin
+            } else if (email === "student@example.com" && password === "student123") {
+                alert('Login Successful!');
+                window.location.href = 'student.html';  // Redirect to student portal for student
+            } else {
+                alert('Invalid credentials! Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

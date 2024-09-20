@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Screen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" type="module"></script>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+        <input type="text" id="name" placeholder="Name" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required><br>
+        <button type="button" onclick="signup()">Sign Up</button>
+    </form>
+    <script>
+        function signup() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Add your signup validation logic here
+            if (password === confirmPassword) {
+                alert('Sign-Up Successful!');
+                window.location.href = 'welcome.html';  // Redirect to welcome page or dashboard after signup
+            } else {
+                alert('Passwords do not match! Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
